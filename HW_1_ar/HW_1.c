@@ -14,7 +14,7 @@ void teerapat(int arr[], int *n, int position) {
 }
 
 int main() {
-    int arr[100] = {1, 2, 3, 4, 5};
+    int arr[100] = {10,9,8,7,6};
     int n = 5;
 
     printf("Original array: ");
