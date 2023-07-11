@@ -19,18 +19,21 @@ void InsertFile(struct headnode *list, int a){
     struct datanode* newNode;
     newNode = (struct datanode*)malloc(sizeof(struct datanode));
     newNode->data = a;
-    newNode->link+NULL;
-    if(list->count==0) {
-        list->head=newNode;
-        list->count++
-
+    newNode->link = NULL; 
+    if(list->count == 0) {
+        list->head = newNode;
+        list->count++;
     }
-    else
-    {
-        
+    else {
+        struct datanode* current = list->head;
+        while(current->link != NULL) {
+            current = current->link;
+        }
+        current->link = newNode;
+        list->count++;
     }
-    
 } 
+
 int main() {
     struct headnode *pList;
     pList= (struct headnode*)malloc(sizeof(struct headnode));
@@ -41,5 +44,4 @@ int main() {
     printf("%d->",pList->head->data);
     printf("%d",pList->head->link->data);
     printf("\ncount=%d",pList->count);
-
 }
