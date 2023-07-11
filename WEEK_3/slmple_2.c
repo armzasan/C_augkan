@@ -25,8 +25,8 @@ void InsertFile(struct headnode *list, int a){
         list->count++;
     }
     else {
-        struct datanode* current = list->head;
-        while(current->link != NULL) {
+     struct datanode* current = list->head;
+        for(int i = 0; i < list->count - 1; i++) {
             current = current->link;
         }
         current->link = newNode;
