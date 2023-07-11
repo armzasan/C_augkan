@@ -26,6 +26,12 @@ void InsertFile(struct headnode *list, int a){
 int main() {
     struct headnode *pList;
     pList= (struct headnode*)malloc(sizeof(struct headnode));
-
+    pList->count=0;
+    pList->head=NULL;
+    InsertFile(pList,5);
+    InsertFile(pList,10);
+    printf("%d->",pList->head->data);
+    printf("%d",pList->head->link->data);
+    printf("\ncount=%d",pList->count);
 
 }
