@@ -50,15 +50,13 @@ void display() {
 }
 
 int main() {
-    Insert(22);
-    Insert(30);
-    Insert(24);
-    Insert(20);
-    printf("Linked List Before Operations : ");
+    Insert(5);
+    Insert(10);
+    printf("befor ");
     display();
     deleteHead();
     deleteHead();
-    printf("Linked List After Operations : ");
+    printf("after ");
     display();
     printf("count=%d",count);
     return 0;
