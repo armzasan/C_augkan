@@ -30,15 +30,26 @@ void Insert(int a) {
 
 void deleteHead() {
     if (head == NULL) {
-        printf("List is empty !! Deletion is not possible\n");
+        printf("List Is Empty!!! Deletion is not possible\n");
     } else {
-        struct Node* temp = head;
-        head = temp->link;
-        free(temp);
-        count = count - 1;
-        printf("Deleted: %d\n", temp->data);
+        struct Node* temp1 = head;
+        struct Node* temp2;
+        if (temp1->link == NULL) {
+            head = NULL;
+            free(temp1);
+            count = count - 1;
+        } else {
+            for (int i = 1; i < count - 1; i++) {
+                temp1 = temp1->link;
+            }
+            temp2 = temp1->link;
+            temp1->link = NULL;
+            free(temp2);
+            count = count - 1;
+        }
     }
 }
+
 
 void display() {
     struct Node* node = head;
@@ -48,16 +59,15 @@ void display() {
     }
     printf("\n");
 }
-
 int main() {
     Insert(5);
     Insert(10);
-    printf("befor ");
+    printf("Before: ");
     display();
     deleteHead();
-    deleteHead();
-    printf("after ");
+    printf("After: ");
     display();
     printf("count=%d",count);
     return 0;
 }
+
