@@ -65,6 +65,7 @@ int main() {
 
     DeQueue();
     DeQueue();
+    DeQueue();
     display();  
 
     return 0;
