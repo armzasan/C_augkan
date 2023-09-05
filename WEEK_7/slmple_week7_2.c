@@ -17,7 +17,7 @@ void pop(char stack[], int *top, int stackSize) {
 }
 
 int main() {
-    int stackSize = 4;
+    int stackSize = 6;
     char stack[stackSize];
     int top = -1;
     
@@ -27,6 +27,7 @@ int main() {
     push('2', stack, &top, stackSize);
     push('3', stack, &top, stackSize);
     push('4', stack, &top, stackSize);
+   
     
     printf("Element on top: %c\n", stack[top]);
     
