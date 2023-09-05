@@ -49,7 +49,7 @@ int main()
     push('4', stack, &top, stackSize);
     printf("Element on top: %c\n", stack[top]);
     pop(stack, &top, stackSize);
-    printf("Top: %d\n", top);
+    printf("Element on top: %c\n", stack[top]);
     //   pop(stack, &top, stackSize);
     //   printf("Top: %d\n", top);
     //   pop(stack, &top, stackSize);
